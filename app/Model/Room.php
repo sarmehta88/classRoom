@@ -22,7 +22,7 @@ class Room extends AppModel {
         ),
         'numDesks' => array(
             'rule' =>  array('validateNumDesks'),
-            'message'=> 'Enter a positive value >0'
+            'message'=> 'Grades PreK->3rd: max 20 desks and 4th->6th: max 35 desks'
         ),
         'grade_id' => array(
             'rule' => 'notEmpty'
