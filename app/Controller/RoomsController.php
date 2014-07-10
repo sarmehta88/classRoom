@@ -113,6 +113,20 @@ class RoomsController extends AppController {
         }   
         $this->set('room', $room);
     }
+
+    public function request_numStudents(){
+        //get all rooms with grades info
+        // remotely post the information to the server
+        $link =  "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'rest_rooms.json';
+         
+        $data = null;
+        $httpSocket = new HttpSocket();
+        $response = $httpSocket->get($link, $data );
+        $this->set('response_code', $response->code);
+        $this->set('response_body', $response->body);
+         $this->set('location',$response->getHeader('Location'));
+        $this -> render('/Client/request_response');
+    }
     
 }
 

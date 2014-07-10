@@ -67,7 +67,7 @@
     </div>
     <div class="panel-body">
 
-    <script type="text/javascript" src="http://smehta.dev.at.sfsu.edu/schooladmin/rooms/redraw/<?php echo h($room['Room']['id']); ?>?width=500;height=500">
+    <script type="text/javascript" src="http://smehta.dev.at.sfsu.edu/schooladmin/rooms/redraw/<?php echo h($room['Room']['id']); ?>?width=400;height=400">
     </script>
     <?php echo h($room['Room']['layout']); ?>
   </div>
